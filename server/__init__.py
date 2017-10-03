@@ -17,7 +17,7 @@ def hello():
     return "hello world!"
 
 
-app_settings = os.getenv('APP_SETTING', 'server.config.DevelopmentConfig')
+app_settings = os.getenv('APP_SETTINGS', 'server.config.DevelopmentConfig')
 app.config.from_object(app_settings)
 app.logger.setLevel(logging.DEBUG)
 
