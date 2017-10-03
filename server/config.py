@@ -1,3 +1,5 @@
+# server/config.py
+
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 postgres_local_base = "postgresql://postgres:test@localhost/"
@@ -16,3 +18,10 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = True
     BCRYPT_LOG_ROUNDS = 4
     SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name + "_dev"
+
+
+class TestingConfig(BaseConfig):
+    DEBUG = True
+    TESTING = True
+    BCRYPT_LOG_ROUNDS = 4
+    SQLALCHEMY_DATABASE_URI = postgres_local_base + database_name + "_test"
