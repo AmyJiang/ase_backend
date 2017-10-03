@@ -7,12 +7,13 @@ service:
   - postgresql
 
 before_install:
+  - export APP_SETTINGS="server.config.TestingConfig"
 
 install:
   - pip install -r requirements.txt
   
 before_script:
-  - psql -c 'create database foodtracker_dev;' -U postgres
+  - psql -c 'create database foodtracker_test;' -U postgres
   - python manager.py create_db
 
 script:
