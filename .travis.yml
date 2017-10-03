@@ -13,11 +13,10 @@ install:
   
 before_script:
   - psql -c 'create database foodtracker_dev;' -U postgres
-  - python manage.py create_db
+  - python manager.py create_db
 
 script:
   - ./presubmit.sh
-  - python manager.py test
 
 after_failure:
   - git diff --name-only
