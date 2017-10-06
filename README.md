@@ -2,8 +2,7 @@ FoodTracker Backend
 ===========================
 Project for ASE, Fall 2017
 
-![CI](https://travis-ci.org/AmyJiang/ase_backend.svg?branch=master)
-
+[![Build Status](https://travis-ci.org/ase-warriors/ase_backend.svg?branch=master)](https://travis-ci.org/ase-warriors/ase_backend)
 ## Setup and Run Server 
 
 Prerequisite: python-2.7, pip, postgresql
